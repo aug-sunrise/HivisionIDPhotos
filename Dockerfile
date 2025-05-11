@@ -13,7 +13,7 @@ COPY requirements.txt requirements-app.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt -r requirements-app.txt
 
-RUN python3 scripts/download_model.py --models hivision_modnet && python3 scripts/download_model.py --models birefnet-v1-lite && python3 scripts/download_model.py --models MTCNN
+RUN python3 scripts/download_model.py --models all
 
 COPY . .
 
