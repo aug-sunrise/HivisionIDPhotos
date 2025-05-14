@@ -17,7 +17,6 @@ COPY . .
 
 RUN python scripts/download_model.py --models all
 
-EXPOSE 7860
 EXPOSE 8080
 
-CMD python3 -u app.py --host 0.0.0.0 --port 7860 && python3 deploy_api.py
+CMD python3 deploy_api.py
